@@ -1,10 +1,28 @@
 {
   "source": "https://github.com/flop-labs/yellowpaper",
   "branch": "main",
-  "last_commit": "1bf7091cbcdca01bdb51230b577d36979e8707d7",
-  "checked_at": "2026-11-05T11:06:50Z",
+  "last_commit": "2a2cc8218048a2933071bb2f45d75335560e39d8",
+  "checked_at": "2026-11-05T20:02:00Z",
   "note": "Newest first. content_change is true when the spec, the parameter file, the changelog or a decision record changed.",
   "entries": [
+    {
+      "commit": "2a2cc8218048a2933071bb2f45d75335560e39d8",
+      "url": "https://github.com/flop-labs/yellowpaper/commit/2a2cc8218048a2933071bb2f45d75335560e39d8",
+      "date": "2026-11-05T21:48:01+08:00",
+      "subject": "ci(triage): use the context-aware public classifier (#237)",
+      "files": [
+        {
+          "path": ".github/workflows/public-triage.yml",
+          "added": 1,
+          "removed": 1
+        }
+      ],
+      "content_change": false,
+      "sections": [],
+      "params": [],
+      "changelog": [],
+      "decisions": []
+    },
     {
       "commit": "1bf7091cbcdca01bdb51230b577d36979e8707d7",
       "url": "https://github.com/flop-labs/yellowpaper/commit/1bf7091cbcdca01bdb51230b577d36979e8707d7",
