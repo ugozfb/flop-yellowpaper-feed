@@ -1,0 +1,53 @@
+name: Watch the Yellow Paper
+
+on:
+  schedule:
+    - cron: "23 */3 * * *"   # every 3 hours (UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: pip install pyyaml==6.0.2
+
+      - name: Clone flop-labs/yellowpaper
+        run: git clone --quiet https://github.com/flop-labs/yellowpaper.git "$RUNNER_TEMP/yp"
+
+      - name: Compare with the last recorded commit
+        id: watch
+        env:
+          YP_DIR: ${{ runner.temp }}/yp
+          SUMMARY_FILE: ${{ runner.temp }}/summary.md
+        run: python watch.py
+
+      - name: Commit the updated feed
+        if: steps.watch.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state.json feed.json feed.xml
+          git commit -m "feed: yellowpaper ${{ steps.watch.outputs.head }}"
+          git push
+
+      - name: Open an issue for content changes
+        if: steps.watch.outputs.issue == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "$(head -n 1 "$RUNNER_TEMP/summary.md" | sed 's/^# //')" --body-file "$RUNNER_TEMP/summary.md"
