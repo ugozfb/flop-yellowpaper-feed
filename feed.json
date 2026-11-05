@@ -1,0 +1,1766 @@
+{
+  "source": "https://github.com/flop-labs/yellowpaper",
+  "branch": "main",
+  "last_commit": "1bf7091cbcdca01bdb51230b577d36979e8707d7",
+  "checked_at": "2026-11-05T11:06:50Z",
+  "note": "Newest first. content_change is true when the spec, the parameter file, the changelog or a decision record changed.",
+  "entries": [
+    {
+      "commit": "1bf7091cbcdca01bdb51230b577d36979e8707d7",
+      "url": "https://github.com/flop-labs/yellowpaper/commit/1bf7091cbcdca01bdb51230b577d36979e8707d7",
+      "date": "2026-11-05T14:18:07+08:00",
+      "subject": "ci(triage): schedule public issue and PR triage (#236)",
+      "files": [
+        {
+          "path": ".github/workflows/public-triage.yml",
+          "added": 32,
+          "removed": 0
+        }
+      ],
+      "content_change": false,
+      "sections": [],
+      "params": [],
+      "changelog": [],
+      "decisions": []
+    },
+    {
+      "commit": "56410c67b11292e707d32ef32e9c4ff9c02e28c7",
+      "url": "https://github.com/flop-labs/yellowpaper/commit/56410c67b11292e707d32ef32e9c4ff9c02e28c7",
+      "date": "2026-10-26T11:50:48+08:00",
+      "subject": "docs(yellowpaper): sync 0.5.0 (draft) from flop-core@dfd98a59",
+      "flop_core": "dfd98a59",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "added": 4,
+          "removed": 0
+        },
+        {
+          "path": "params/flop-protocol-params.yaml",
+          "added": 1,
+          "removed": 1
+        },
+        {
+          "path": "yellowpaper.md",
+          "added": 11,
+          "removed": 9
+        }
+      ],
+      "content_change": true,
+      "sections": [
+        "11.1 Enforced invariants",
+        "12.1 Sessions — attested streaming & aggregate settlement",
+        "12.4 Cryptographic adversary model › Rationale & sources *(non-normative)*",
+        "Appendix A — Parameter Reference",
+        "G.1 Compute channel — `pallet_compute_channel` (sole inference-dispatch path, §12.1)",
+        "H.5 HTLC, invariants, sessions, governance, validators (§10–§15)"
+      ],
+      "params": [
+        {
+          "name": "refund_penalty_phi_percent",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        }
+      ],
+      "changelog": [
+        "Name `FLOPFoundationAccount` as the sink of the failed/early-close penalty `φ·(E−P)` with zero burn in §12.1 R12.1d, §11.1 INV-M06, Appendix A (`refund_penalty_phi_percent`) and Appendix G.1 `finalize`, matching §9.3 R9.10 and Appendix D; record in Appendix H.5 that the runtime still burns that leg."
+      ],
+      "decisions": []
+    },
+    {
+      "commit": "5730f4b6cf56fa88bb93bbda272dc449b2f77b17",
+      "url": "https://github.com/flop-labs/yellowpaper/commit/5730f4b6cf56fa88bb93bbda272dc449b2f77b17",
+      "date": "2026-10-25T23:44:54+08:00",
+      "subject": "docs(yellowpaper): sync 0.5.0 (draft) from flop-core@4e2b0089",
+      "flop_core": "4e2b0089",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "added": 53,
+          "removed": 8
+        },
+        {
+          "path": "README.md",
+          "added": 4,
+          "removed": 0
+        },
+        {
+          "path": "decisions/v0.5.md",
+          "added": 510,
+          "removed": 0
+        },
+        {
+          "path": "evidence/check-money-path-vectors.py",
+          "added": 25,
+          "removed": 0
+        },
+        {
+          "path": "evidence/money-path-v1.json",
+          "added": 892,
+          "removed": 30
+        },
+        {
+          "path": "evidence/money-path-v1.md",
+          "added": 51,
+          "removed": 14
+        },
+        {
+          "path": "evidence/money-path-v1.schema.json",
+          "added": 460,
+          "removed": 186
+        },
+        {
+          "path": "evidence/reproduce-audit.py",
+          "added": 14,
+          "removed": 14
+        },
+        {
+          "path": "evidence/reproduce-sampler.py",
+          "added": 1,
+          "removed": 1
+        },
+        {
+          "path": "evidence/reproduce.py",
+          "added": 15,
+          "removed": 15
+        },
+        {
+          "path": "evidence/yellowpaper-audit-evidence.json",
+          "added": 14,
+          "removed": 14
+        },
+        {
+          "path": "evidence/yellowpaper-claim-evidence.csv",
+          "added": 44,
+          "removed": 44
+        },
+        {
+          "path": "evidence/yellowpaper-claim-evidence.json",
+          "added": 63,
+          "removed": 63
+        },
+        {
+          "path": "params/flop-protocol-params.yaml",
+          "added": 153,
+          "removed": 57
+        },
+        {
+          "path": "scripts/check_param_identities.py",
+          "added": 17,
+          "removed": 15
+        },
+        {
+          "path": "scripts/check_params.py",
+          "added": 12,
+          "removed": 2
+        },
+        {
+          "path": "scripts/gen_param_table.py",
+          "added": 37,
+          "removed": 6
+        },
+        {
+          "path": "yellowpaper-attribution.md",
+          "added": 2,
+          "removed": 2
+        },
+        {
+          "path": "yellowpaper-coverage.md",
+          "added": 2,
+          "removed": 2
+        },
+        {
+          "path": "yellowpaper.md",
+          "added": 391,
+          "removed": 230
+        }
+      ],
+      "content_change": true,
+      "sections": [
+        "0. Conformance & Reading Guide",
+        "2.3 Safety — the three sub-proofs",
+        "5.3 The verified-task footprint & sovereign DA",
+        "5.3 The verified-task footprint & sovereign DA › Rationale & sources *(non-normative)*",
+        "6.1 Primitives",
+        "6.5 Cryptographic primitives & accounts › Rationale & sources *(non-normative)*",
+        "8.2 Era-T conversion and airdrop vesting › Requirements",
+        "8.2 Era-T conversion and airdrop vesting › Data structures",
+        "8.2 Era-T conversion and airdrop vesting › Rationale & sources *(non-normative)*",
+        "9. Emission & Supply",
+        "9.1 Requirements",
+        "9.3 Genesis configuration",
+        "9.3 Genesis configuration › Rationale & sources *(non-normative)*",
+        "10. HTLC Atomic Swap",
+        "11.1 Enforced invariants",
+        "11.2 Session `G_n` settlement gate",
+        "11.3 Validator slashing table",
+        "11.3 Validator slashing table › Rationale & sources *(non-normative)*",
+        "12.1 Sessions — attested streaming & aggregate settlement",
+        "13.2 Validator (consensus + DA + leader duties)",
+        "15.2 Onboarding *(normative)*",
+        "15.3 Duties & resource intensity",
+        "15.5 Rotation & set size",
+        "15.6 The validator across the session lifecycle",
+        "15.7 Slashing & recovery",
+        "15.7 Slashing & recovery › Rationale & sources *(non-normative)*",
+        "Appendix A — Parameter Reference",
+        "Appendix B — Sources",
+        "Appendix C — Miner Lifecycle (End-to-End)",
+        "Appendix D — Fee & Revenue Map",
+        "Appendix E — Open Specification Items",
+        "F.3 Session transcript (compute-channel, §12.1)",
+        "G.1 Compute channel — `pallet_compute_channel` (sole inference-dispatch path, §12.1)",
+        "G.3 Staking, calibration, vesting, DA, HTLC",
+        "H.1 Core protocol",
+        "H.4 Primitives, calibration, vesting, emission (§6–§9)",
+        "H.5 HTLC, invariants, sessions, governance, validators (§10–§15)",
+        "Appendix I — Runtime Composition"
+      ],
+      "params": [
+        {
+          "name": "airdrop_vesting_duration_blocks",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "audit_fee_split_ppm",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "calibration_lease_blocks",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "calibration_max_gpu_inventory_entries",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "calibration_min_burst_blocks",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "calibration_min_recalibration_interval_blocks",
+          "change": "modified",
+          "fields": [
+            "description",
+            "implementations"
+          ]
+        },
+        {
+          "name": "calibration_min_utilization_ppm",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "calibration_min_verified_jobs",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "calibration_provisional_discount_ppm",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "calibration_renewal_max_age_blocks",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "calibration_renewal_min_verified_jobs",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "channel_max_session_activation_bytes",
+          "change": "added",
+          "new": 65536
+        },
+        {
+          "name": "ejection_cooldown_blocks",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "genesis_agent_airdrop",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "genesis_reserve",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "htlc_burn_share_ppt",
+          "change": "modified",
+          "fields": [
+            "on_chain"
+          ]
+        },
+        {
+          "name": "inference_fee_miner_share_ppt",
+          "change": "added",
+          "new": 850
+        },
+        {
+          "name": "inference_fee_validator_share_ppt",
+          "change": "added",
+          "new": 150
+        },
+        {
+          "name": "miner_commission_cap_percent",
+          "change": "modified",
+          "fields": [
+            "decision",
+            "description"
+          ]
+        },
+        {
+          "name": "protocol_upgrade_support_floor",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "slash_fraud_percent",
+          "change": "modified",
+          "fields": [
+            "decision",
+            "description"
+          ]
+        },
+        {
+          "name": "soft_tier_spot_check_rate_ppm",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "sponsored_self_stake_enabled",
+          "change": "added",
+          "new": "cfg!(feature = \"sponsored-self-stake\")"
+        },
+        {
+          "name": "staker_share_ppt",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "subsidy_duration_blocks",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "subsidy_per_block_per_recipient",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "tx_fee_author_share_percent_live",
+          "change": "modified",
+          "fields": [
+            "decision",
+            "description"
+          ]
+        },
+        {
+          "name": "tx_fee_burn_percent_live",
+          "change": "modified",
+          "fields": [
+            "decision",
+            "description",
+            "implementations",
+            "value"
+          ],
+          "old": 10,
+          "new": 0
+        },
+        {
+          "name": "validator_active_set_cap",
+          "change": "modified",
+          "fields": [
+            "description",
+            "implementations"
+          ]
+        },
+        {
+          "name": "validator_growth_denominator",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        },
+        {
+          "name": "validator_growth_numerator",
+          "change": "modified",
+          "fields": [
+            "description"
+          ]
+        }
+      ],
+      "changelog": [
+        "State in §15.5 R15.5 that proven-fault slash proceeds at the active-set floor are confiscated and transferred to the Foundation (R9.10) rather than burned.",
+        "Propagate the zero-burn, operator self-stake-only, and off-chain referral rulings to the normative spec and canonical parameters (D-0529, D-0530, D-0531; #2792, #1945, #1358): set `tx_fee_burn_percent_live` (`BurnFees`) to 0% with 100% of live transaction fees and tips routed to the block author (§9.1 R9.6, Appendix D, Appendix H); replace legacy \"full-burn\" slash terminology with 100% routing to `FLOPFoundationAccount` (§11.3, §13.2, §15.7, Appendix A); prohibit third-party delegated staking into validators and miners, deprecate delegation extrinsics/caps and operator commissions (`miner_stak",
+        "Let sponsors post an operator's whole registration bond on devnet and testnet (R6.1a; D-0528). The bond stays frozen in the sponsor account and is refunded only to the sponsor. It counts as miner or validator self-stake only on runtimes built with `sponsored_self_stake_enabled`. Narrow E.32 to its mainnet questions; index the new calls in G.3 and their status in H.1.",
+        "Reconcile normative contradictions surfaced by the 2026-10-13 mirror sync (#2648): align §15.5, E.56 and H.5 with the implemented `validator_min_active_validators` = 4 removal/rotation floor and 10% churn cap (#1727) while keeping the D-0507/D-0508/E.42 policy questions open; reconcile §9.3 R9.9, §15.5 R15.5/R15.5b and Appendix G.3 on active-set entry paths (`rotate` promotion from `ValidatorQueue` vs direct `un_jail`/`rejoin` restoration under `validator_active_set_cap`, and rotation ejection thawing self-stake before re-registration); align §9, R9.2, R9.3, Appendix A and Appendix D cumulativ",
+        "Credit miner block rewards toward the Miner airdrop unlock (R8.7; D-0527, superseding D-0517 item 1). A Miner grant now unlocks one FLOP per FLOP of the miner-leg block rewards minted to the grantee, counted once the distribution block is finalized, as well as per FLOP of its settled channel payouts after the dispute window. Other block-reward legs, the subsidy, transaction fees, refunds, penalties and bonds still earn nothing.",
+        "Mark INV-M06 payout atomicity LIVE in §11.1 and H.5: channel settlement now reverts when the refund-penalty burn fails, as it already did for the miner and refund transfers.",
+        "Describe implemented HTLC pair directions as target-only for initial publication (E.48).",
+        "Make current-profile channel settlements payment-only (§11.2 R11.2b). Receipt claims no Historical recovery and future audited credit remain open.",
+        "Protect Ephemeral DA blobs from pruning while any usage pin remains, matching Leased blobs (R5.3d; D-0521). Pins do not extend expiry or admit new usage after the retention deadline. sessions once their dispute window passes, with no end block (D-0527 adds miner block rewards), and the performance adjustment is retired. A Validator grant stays frozen until the first halving, then grants release one per day",
+        "Specify paid-storage service lanes that close at a fixed boundary with"
+      ],
+      "decisions": [
+        "D-0521",
+        "D-0525",
+        "D-0526",
+        "D-0527",
+        "D-0517",
+        "D-0528",
+        "D-0529",
+        "D-0530",
+        "D-0531",
+        "D-0532",
+        "D-0418",
+        "D-0533",
+        "D-0407",
+        "D-0441",
+        "D-0403",
+        "D-0518",
+        "D-0437",
+        "D-0440",
+        "D-0409",
+        "D-0420",
+        "D-0408"
+      ]
+    },
+    {
+      "commit": "70e691c758e53eed17a016a02b0a2ae1200d3744",
+      "url": "https://github.com/flop-labs/yellowpaper/commit/70e691c758e53eed17a016a02b0a2ae1200d3744",
+      "date": "2026-10-13T14:38:47+08:00",
+      "subject": "docs(yellowpaper): sync 0.5.0 (draft) from flop-core@5e6e2427",
+      "flop_core": "5e6e2427",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "added": 13,
+          "removed": 0
+        },
+        {
+          "path": "research/audit-economics-evidence.md",
+          "added": 2,
+          "removed": 2
+        },
+        {
+          "path": "yellowpaper-attribution.md",
+          "added": 2,
+          "removed": 1
+        },
+        {
+          "path": "yellowpaper-coverage.md",
+          "added": 2,
+          "removed": 2
+        },
+        {
+          "path": "yellowpaper.md",
+          "added": 78,
+          "removed": 61
+        }
+      ],
+      "content_change": true,
+      "sections": [
+        "3.3 Tier 1 — TEE attestation & measuring `model_hash` *(optional / HARD tier)*",
+        "11.1 Enforced invariants",
+        "Appendix D — Fee & Revenue Map",
+        "Appendix E — Open Specification Items",
+        "F.3 Session transcript (compute-channel, §12.1)",
+        "G.1 Compute channel — `pallet_compute_channel` (sole inference-dispatch path, §12.1)",
+        "G.3 Staking, calibration, vesting, DA, HTLC",
+        "H.2 Verification (§3)",
+        "H.3 Metering, sizing, DA (§4–§5)",
+        "H.4 Primitives, calibration, vesting, emission (§6–§9)",
+        "H.5 HTLC, invariants, sessions, governance, validators (§10–§15)"
+      ],
+      "params": [],
+      "changelog": [
+        "Name RTMR3 as the only accepted measurement path for the model root (§3.3 step 2), matching the step 3 verifier and D-0404.",
+        "Bring Appendix E/H status, trackers and code paths up to date with landed code; no protocol rule changes. Index the on-chain bisection dispute calls in G.1 and correct `open_dispute`'s arguments; mark multi-round bisection and `G_n` overflow rejection LIVE; record the development-network paid-storage pallet (rent released without audit), its CI-run Quint models and its simulation as PARTIAL; narrow E.9, E.32, E.41, E.46, E.47, E.51 and E.54 to what remains open; and replace enforcement paths for code removed with the per-task path in §11.1 and H.5.",
+        "Specify Appendix D's chain inclusion-fee terms, align the shared-collateral example with its generated four-claim row, and list both work-vesting grant entry points in Appendix G.3."
+      ],
+      "decisions": []
+    },
+    {
+      "commit": "b03378c0a6d5194d69e5be90968f46e8e6813cb8",
+      "url": "https://github.com/flop-labs/yellowpaper/commit/b03378c0a6d5194d69e5be90968f46e8e6813cb8",
+      "date": "2026-10-13T13:16:50+08:00",
+      "subject": "docs(yellowpaper): sync 0.5.0 (draft) from flop-core@a1f3759e",
+      "flop_core": "a1f3759e",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "added": 66,
+          "removed": 0
+        },
+        {
+          "path": "decisions/v0.4.md",
+          "added": 54,
+          "removed": 5
+        },
+        {
+          "path": "decisions/v0.5.md",
+          "added": 510,
+          "removed": 14
+        },
+        {
+          "path": "evidence/check-money-path-vectors.py",
+          "added": 68,
+          "removed": 0
+        },
+        {
+          "path": "evidence/compute-channel.py",
+          "added": 3,
+          "removed": 2
+        },
+        {
+          "path": "evidence/generate-wire-format-vectors.py",
+          "added": 82,
+          "removed": 12
+        },
+        {
+          "path": "evidence/money-path-v1.json",
+          "added": 838,
+          "removed": 0
+        },
+        {
+          "path": "evidence/money-path-v1.md",
+          "added": 57,
+          "removed": 0
+        },
+        {
+          "path": "evidence/money-path-v1.schema.json",
+          "added": 426,
+          "removed": 0
+        },
+        {
+          "path": "evidence/reproduce-audit.py",
+          "added": 89,
+          "removed": 17
+        },
+        {
+          "path": "evidence/reproduce.py",
+          "added": 81,
+          "removed": 29
+        },
+        {
+          "path": "evidence/wire-format-v1.json",
+          "added": 43,
+          "removed": 9
+        },
+        {
+          "path": "evidence/wire-format-v1.schema.json",
+          "added": 684,
+          "removed": 33
+        },
+        {
+          "path": "evidence/yellowpaper-audit-evidence.json",
+          "added": 14,
+          "removed": 14
+        },
+        {
+          "path": "evidence/yellowpaper-claim-evidence.csv",
+          "added": 74,
+          "removed": 74
+        },
+        {
+          "path": "evidence/yellowpaper-claim-evidence.json",
+          "added": 123,
+          "removed": 93
+        },
+        {
+          "path": "params/flop-protocol-params.yaml",
+          "added": 482,
+          "removed": 72
+        },
+        {
+          "path": "scripts/check_param_identities.py",
+          "added": 3,
+          "removed": 3
+        },
+        {
+          "path": "scripts/check_params.py",
+          "added": 62,
+          "removed": 2
+        },
+        {
+          "path": "scripts/gen_param_table.py",
+          "added": 1,
+          "removed": 1
+        },
+        {
+          "path": "yellowpaper-attribution.md",
+          "added": 281,
+          "removed": 10
+        },
+        {
+          "path": "yellowpaper-coverage.md",
+          "added": 30,
+          "removed": 30
+        },
+        {
+          "path": "yellowpaper.md",
+          "added": 496,
+          "removed": 184
+        }
+      ],
+      "content_change": true,
+      "sections": [
+        "1.2 Protocol clocks — canonical table",
+        "1.3 Acronyms & technical terms",
+        "2.3 Safety — the three sub-proofs",
+        "2.4 Sybil model — miner and checker identities",
+        "2.4 Sybil model — miner and checker identities › Rationale & sources *(non-normative)*",
+        "5.3 The verified-task footprint & sovereign DA",
+        "5.3 The verified-task footprint & sovereign DA › Rationale & sources *(non-normative)*",
+        "5.4 Agent memory and paid data storage",
+        "5.4 Agent memory and paid data storage › Rationale & sources *(non-normative)*",
+        "6.1 Primitives",
+        "6.2 Agent autonomy — operating without per-action consensus",
+        "6.4 Collaborative pool & composition",
+        "6.5 Cryptographic primitives & accounts",
+        "6.5 Cryptographic primitives & accounts › Rationale & sources *(non-normative)*",
+        "7. Hardware Calibration & Drift",
+        "7.2 Renewable cap",
+        "7.3 Drift & re-calibration › Rationale & sources *(non-normative)*",
+        "8.2 Era-T conversion and airdrop vesting",
+        "8.2 Era-T conversion and airdrop vesting › Requirements",
+        "8.2 Era-T conversion and airdrop vesting › Data structures",
+        "8.2 Era-T conversion and airdrop vesting › Rationale & sources *(non-normative)*",
+        "9. Emission & Supply",
+        "9.1 Requirements",
+        "9.3 Genesis configuration",
+        "9.3 Genesis configuration › Rationale & sources *(non-normative)*",
+        "10.1 Requirements",
+        "10.2 Chain-pair qualification",
+        "11.1 Enforced invariants",
+        "11.2 Session `G_n` settlement gate",
+        "11.3 Validator slashing table › Rationale & sources *(non-normative)*",
+        "12.1 Sessions — attested streaming & aggregate settlement",
+        "15.2 Onboarding *(normative)*",
+        "15.4 Selection — the PoUI-gated committee",
+        "15.5 Rotation & set size",
+        "15.6 The validator across the session lifecycle",
+        "Appendix A — Parameter Reference",
+        "Appendix C — Miner Lifecycle (End-to-End)",
+        "Appendix D — Fee & Revenue Map",
+        "Appendix E — Open Specification Items",
+        "Appendix F — Message & Storage Formats",
+        "F.3 Session transcript (compute-channel, §12.1)",
+        "F.7 Paid object storage (§5.4)",
+        "G.1 Compute channel — `pallet_compute_channel` (sole inference-dispatch path, §12.1)",
+        "G.3 Staking, calibration, vesting, DA, HTLC",
+        "G.4 Paid object storage (§5.4)",
+        "H.1 Core protocol",
+        "H.3 Metering, sizing, DA (§4–§5)",
+        "H.4 Primitives, calibration, vesting, emission (§6–§9)",
+        "H.5 HTLC, invariants, sessions, governance, validators (§10–§15)"
+      ],
+      "params": [
+        {
+          "name": "agent_cap_window_blocks",
+          "change": "added",
+          "new": 86400
+        },
+        {
+          "name": "agent_identity_min_stake",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "agent_share_ppt",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "airdrop_vesting_duration_blocks",
+          "change": "modified",
+          "fields": [
+            "description",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "aleph_gossip_protocol_version",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "aleph_max_data_branch_len",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "aleph_max_round",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "attest_max_claim_signatures",
+          "change": "modified",
+          "fields": [
+            "description",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "attest_max_verifier_set_members",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "audit_fee_per_turn",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "audit_fee_split_ppm",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "audit_quantum_gn",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "babe_primary_probability_denominator",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "btc_block_time_flop_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "calibration_lease_blocks",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "calibration_max_gpu_inventory_entries",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "calibration_min_burst_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "calibration_min_recalibration_interval_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "calibration_min_utilization_ppm",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "calibration_min_verified_jobs",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "calibration_provisional_discount_ppm",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "calibration_renewal_max_age_blocks",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "calibration_renewal_min_verified_jobs",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "channel_ack_window_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "channel_audit_forfeit_slash_ppm",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "channel_base_per_turn",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "channel_c_turn_fixed",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "channel_challenger_bond",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "channel_dispute_response_window_blocks",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "channel_dispute_window_blocks",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "channel_max_merkle_path_len",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "channel_max_settlement_turns",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "channel_toploc_escalation_window_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "circuit_breaker_flop_cap",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "circuit_breaker_tx_count",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "circuit_breaker_window",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "da_ephemeral_retention_blocks",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "da_lease_deposit_per_byte",
+          "change": "modified",
+          "fields": [
+            "default_mutability",
+            "governance_setter",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "da_min_replication_factor",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "da_shard_count",
+          "change": "modified",
+          "fields": [
+            "default_mutability",
+            "governance_setter",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "ejection_cooldown_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "escrow_per_reservation_slot",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "finality_committee_premium_weight_ppm",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "finality_committee_size",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "finality_freeze_threshold",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "finality_lag_warn",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "floor_reward",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "genesis_agent_airdrop",
+          "change": "modified",
+          "fields": [
+            "description",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "genesis_miner_airdrop",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "genesis_reserve",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "genesis_supply",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "genesis_validator_airdrop",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "gn_decay_factor_ppb",
+          "change": "added",
+          "new": 1000000000
+        },
+        {
+          "name": "governance_root_track_approval",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "governor_default_enabled",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "governor_dynamic_burn_tier1",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "governor_dynamic_burn_tier2",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "governor_dynamic_burn_tier3",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "governor_emission_damping_max_boost",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "governor_emission_damping_util_floor",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "halving_interval_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "high_value_gn_threshold",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "htlc_burn_share_ppt",
+          "change": "added",
+          "new": 0
+        },
+        {
+          "name": "htlc_timelock_symmetry_safety_margin_percent",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "initial_block_reward",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "max_active_reservations_base",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "max_decode_policies_per_model",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "max_finality_stall",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "max_halvings",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "metering_cert_circuit_version",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "metering_cert_guest_image_id",
+          "change": "modified",
+          "fields": [
+            "governance_setter",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "min_certificate_premium_ppm",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "min_force_open_escrow_for_failed_ack",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "min_miner_self_stake",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "miner_capacity_stake_per_gflop",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "miner_capacity_stake_sim_per_10_gflop",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "miner_commission_cap_percent",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "miner_share_ppt",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "miner_stake_revocation_latency_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "miner_stake_surge_multiplier_ppm",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "miner_unbonding_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "paid_storage_enabled",
+          "change": "added",
+          "new": "cfg!(feature = \"paid-storage-unratified\")"
+        },
+        {
+          "name": "poui_allow_simulator_mode",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "poui_max_submissions_epoch",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "poui_submission_window_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "poui_tee_v1_profile_id",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "poui_tee_v1_profile_version",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "protocol_upgrade_support_floor",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "refund_penalty_phi_percent",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "reward_distribution_period_blocks",
+          "change": "added",
+          "new": 86400
+        },
+        {
+          "name": "sampled_audit_alpha_ppm",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "sampled_audit_checkpoint_turns",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "slash_fraud_percent",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "soft_tier_spot_check_rate_ppm",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "staker_share_ppt",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "subsidy_duration_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "subsidy_per_block_per_recipient",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "throughput_tripwire_gflops_per_sec",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain",
+            "unit"
+          ]
+        },
+        {
+          "name": "timing_max_clock_skew_ms",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "timing_network_pad_ms",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "tokens_per_byte_band_ppm_llama3",
+          "change": "modified",
+          "fields": [
+            "description",
+            "governance_setter",
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "toploc_band_constants_fields",
+          "change": "modified",
+          "fields": [
+            "governance_setter",
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "toploc_band_eng29_threshold_milli",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "toploc_band_kappa_within_llama31_8b_bf16",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "toploc_band_tau_accept_bf16_milli",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "toploc_band_tau_slash_bf16_milli",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "tx_fee_author_share_percent_live",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "tx_fee_burn_percent_live",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "tx_length_to_fee",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "tx_operational_fee_multiplier",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "tx_target_block_fullness_percent",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "tx_weight_to_fee",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "validator_active_set_cap",
+          "change": "added",
+          "new": 1000
+        },
+        {
+          "name": "validator_attestation_threshold",
+          "change": "modified",
+          "fields": [
+            "default_mutability",
+            "governance_setter",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "validator_extended_downtime_slash_percent",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "validator_growth_denominator",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "validator_growth_numerator",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "validator_min_active_validators",
+          "change": "added",
+          "new": 4
+        },
+        {
+          "name": "validator_min_scored_samples",
+          "change": "added",
+          "new": 3
+        },
+        {
+          "name": "validator_min_stake",
+          "change": "modified",
+          "fields": [
+            "effective_mutability",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "validator_rotation_churn_percent",
+          "change": "added",
+          "new": 10
+        },
+        {
+          "name": "validator_rotation_interval_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "validator_share_ppt",
+          "change": "modified",
+          "fields": [
+            "implementations",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "validator_unbonding_blocks",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "validators_to_eject",
+          "change": "modified",
+          "fields": [
+            "description",
+            "mutability",
+            "on_chain"
+          ]
+        },
+        {
+          "name": "validators_to_promote",
+          "change": "modified",
+          "fields": [
+            "mutability",
+            "on_chain"
+          ]
+        }
+      ],
+      "changelog": [
+        "Ratify slot/tranche position rent (D-0524, R5.4e/f, E.54, F.7, G.4): replacements retain historical earned rent, failed or forfeited deltas refund the payer, and new tariffs use separate funded tranches. Supersede independent provider ceilings; add seven executable balance vectors.",
+        "Dispose implemented HTLC pair directions as target-only for initial publication (E.48, #1498). Preserve cross-leg late-claim, finality-stall and failed-payout counterexamples, qualify the local formal models, and add focused pallet/contract expiry-ordering tests and a reproducible pair gate.",
+        "Specify the Agent airdrop unlock as spend-to-unlock (R8.7, R8.8; D-0522). An Agent grant unlocks nothing at its start and has no end block; it unlocks one FLOP per three FLOP of its locked principal in the gross `payable` of settled sessions, once every fraud dispute raised in the window has resolved, and its locked compute spend is capped at three quarters of principal. Channel escrow drawn from locked principal goes to the `payable` first and is refunded first, back to the grant as frozen principal. E.38 no longer holds the Agent horizon.",
+        "Make current-profile channel settlements payment-only (R11.2b, task 1494). Receipt claims no longer feed public work rewards or performance vesting, including unilateral/DA-void payout. Historical recovery and future audited credit remain open; the distinct decision ID awaits approval.",
+        "Tighten the Appendix F vector schema to require canonical fields, byte widths, integer ranges, case identities, and coverage. Wide integers use decimal strings so JSON consumers preserve their exact values; the public generator also checks duplicate identities.",
+        "Replace §8.2's Miner and Validator airdrop unlock (R8.7, R8.8; D-0517). A Miner grant is a quarter liquid at its start and unlocks the rest one FLOP per FLOP it receives as miner from settled sessions once their dispute window passes, with no end block; block rewards earn no credit, and the performance adjustment is retired. A Validator grant stays frozen until the first halving, then grants release one per day without unbonding; none releases until E.38 fixes the order. Only Agent grants may still spend locked principal on compute; a miner may bond its locked principal as its own self-stake.",
+        "Make block rewards and the subsidy liquid on issue (R9.13; D-0518). The miner and validator legs and the Labs/Foundation subsidy are never auto-compounded, force-staked or vested, and agent-leg payouts are liquid once E.40 ratifies; validator earnings no longer auto-compound into locked stake, and E.39 is closed.",
+        "Ratify §8.2's grant-landing (R8.6) and claim and locked-spend (R8.8) rules as D-0515. D-0514 had covered only R8.3–R8.5 and R8.7; the requirement text is unchanged.",
+        "Repoint Appendix E blockers to live trackers and refresh Appendix H implementation grades for fee distribution, metering overflow, session-key invariants, and collusion monitoring.",
+        "Ratified D-0519 (owner, 2026-10-04): paid-storage service lanes close at a fixed boundary with a funding-pinned claim deadline on the finalized prefix. Only the lane's provider redeems, with strict sequence, counter and amount checks, including after reassignment. Otherwise-valid post-close signatures remain payable within the unspent budget until the deadline; finalization refunds only the remainder above it. Unknown finality rejects both operations. R5.4g, R5.4j, E.54, F.7 and G.4 carry the rule. E.54 constrains sequential entitlement-maturity and funded-request timing to fit that fixed dead",
+        "Era-T conversion and airdrop vesting (§8.2, R8.3–R8.8; D-0514). Conversion draws only on the fixed genesis cohort pools. Agents are scored on settled compute-channel spend and miners on verified effective-FLOP; balance, stake, job count and active days carry no weight. Snapshot and evidence of record are fixed before genesis lock. Grants land as frozen genesis balances with linear vesting and finalized-head claims. The miner performance adjustment fails closed: without both performance inputs a Miner grant unlocks nothing before its end block. E.38 keeps score caps, the validator activity basi",
+        "Development-network exception to the paid-storage activation gate (D-0512, R5.4q): a valueless devnet may run the §5.4 extension ahead of E.54 only from a runtime built with a non-default, development-only flag, under an explicitly unratified profile with placeholder values kept out of the canonical parameters, with unaudited rent releases marked as such, and with no result citable as E.54/E.47 evidence. R5.4k now names R5.4q as its only exception; every other network is unchanged."
+      ],
+      "decisions": [
+        "D-0441",
+        "D-0403",
+        "D-0512",
+        "D-0513",
+        "D-0514",
+        "D-0515",
+        "D-0517",
+        "D-0518",
+        "D-0519",
+        "D-0522",
+        "D-0523",
+        "D-0524",
+        "D-0506",
+        "D-0421",
+        "D-0438",
+        "D-0440",
+        "D-0435",
+        "D-0408"
+      ]
+    }
+  ]
+}
